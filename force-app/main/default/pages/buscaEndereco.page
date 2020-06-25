@@ -1,0 +1,13 @@
+<apex:page standardController="Endereco__c">
+<h1>Inserir Endereço através do VFP</h1>
+<br/>
+    <apex:form>
+        <apex:pageBlock>
+            <apex:pageBlockSection title="Busca de Endereço">
+                <apex:inputField value="{!Endereco__c.CEP__c}"/>
+                <apex:inputField value="{!Endereco__c.Account__c}"/>
+                <apex:commandButton action="{!Save}" value="Salvar"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

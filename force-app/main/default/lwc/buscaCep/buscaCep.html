@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Buscar Endereço" icon-name="standard:contact">
+        <div class="slds-m-around_medium">
+            <p>CEP: {cep}</p>
+            </br>
+            <lightning-button variant="brand" label="BUSCAR CEP"  onclick={buscaCepClick}></lightning-button>
+        </div>
+        <div class="slds-m-around_medium">
+            <p>Endereço: {enderecoCompleto}</p>
+            </br>
+            <lightning-button variant="neutral" label="BUSCAR GEO"  onclick={buscaGeoClick}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
