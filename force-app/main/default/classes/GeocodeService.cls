@@ -1,6 +1,6 @@
 public class GeocodeService {
     private static final GeocodeService instance = new GeocodeService();
-    public static String API_KEY = 'AIzaSyA7kIoYUBGlD2inYVa74C0PmxF_-QRCrpQ';
+    public static String API_KEY = 'valid-key';
 
     public static GeocodeService getInstance() {
         return instance;
