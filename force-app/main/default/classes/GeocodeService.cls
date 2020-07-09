@@ -20,7 +20,6 @@ public class GeocodeService {
         
         try {
             res = http.send(req);
-            System.debug('Antes de deserializar: '+res);
             retorno = (EnderecoServiceTO.GeocodeTO)JSON.deserialize(res.getBody(), EnderecoServiceTO.GeocodeTO.class);
             System.debug('Retorno: '+retorno);
             
