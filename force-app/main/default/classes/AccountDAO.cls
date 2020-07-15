@@ -34,7 +34,7 @@ public with sharing class AccountDAO {
                     identificacaoFiscal__c IN : setIdentificacao];
     }
 
-    public static List<Account> getParentAccounts(){
+    public static List<Account> getParentAccounts(Set<String> raizCnpj){
         return [SELECT
                     Id,
                     Name,
@@ -45,7 +45,8 @@ public with sharing class AccountDAO {
                     Account
                 WHERE
                     identificacaoFiscal__c LIKE '%0001%'
-                    AND tipoIdentificacaoFiscal__c = 'CNPJ'];
+                    AND tipoIdentificacaoFiscal__c = 'CNPJ'
+                    AND IdentificacaoFiscalSemFormatacao__c LIKE : raizCnpj];
     }
 
     public static List<Account> getSubsidiaryAccounts(Set<String> raizCnpjMatrizes){

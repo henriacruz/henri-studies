@@ -6,9 +6,11 @@ global class EnderecoBO {
         return instance;
     }
 
-    public static void formatarCep(List<Endereco__c> lstEndereco){
+    public static void formatarCep(List<Endereco__c> lstEndereco, Map<Id,Endereco__c> oldMapEnderecos){
+        oldMapEnderecos = oldMapEnderecos == null ? new Map<Id,Endereco__c>() : oldMapEnderecos; 
         for (Endereco__c endereco : lstEndereco) {
-            if(!String.isBlank(endereco.cep__c))
+            Endereco__c oldEndereco = oldMapEnderecos.get(endereco.Id);
+            if(!String.isBlank(endereco.cep__c) && endereco.cep__c != oldEndereco.cep__c)
                 endereco.cep__c = endereco.cep__c.replace('-','');
         }
     }
