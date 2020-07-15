@@ -22,8 +22,7 @@ export default class BuscaCep extends LightningElement {
         else if(data){
             this.endereco = data;
             this.cep = this.endereco.fields.CEP__c.value;
-            this.enderecoCompleto = this.endereco.fields.EnderecoCompleto__c.value;
-            this.error = undefined;
+            this.enderecoCompleto = this.endereco.fields.EnderecoCompleto__c.value;;
         }
     }
 

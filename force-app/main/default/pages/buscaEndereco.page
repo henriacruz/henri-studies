@@ -1,4 +1,4 @@
-<apex:page standardController="Endereco__c">
+<apex:page standardController="Endereco__c" lightningStylesheets="true">
 <h1>Inserir Endereço através do VFP</h1>
 <br/>
     <apex:form>
@@ -10,4 +10,5 @@
             </apex:pageBlockSection>
         </apex:pageBlock>
     </apex:form>
+    <apex:iframe src="https://www.youtube.com/embed/4l52uwIz2eo"></apex:iframe>
 </apex:page>
