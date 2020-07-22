@@ -11,4 +11,8 @@
         </apex:pageBlock>
     </apex:form>
     <apex:iframe src="https://www.youtube.com/embed/4l52uwIz2eo"></apex:iframe>
+    Hoje é o dia: <p id="output"></p>
+    <script>
+        document.getElementById('output').innerHTML = Date();
+    </script>
 </apex:page>
